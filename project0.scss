@@ -1,0 +1,63 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: red;
+$li-color: blue;
+
+%list {
+  color: $li-color;
+  font-size:22px;
+  font-style:italic;
+}
+
+      div     {
+              color:black;
+              }
+
+      body    {
+              font: 100% $font-stack;
+              color: $primary-color;
+              background-color: white;
+
+              ul li   {
+                      @extend %list;
+                      font-weight: bold;
+                      }
+
+              p       {
+                      @extend %list;
+                      font-weight: normal;
+                      }
+              }
+
+      table   {
+              border-radius: 10px;
+              border-style:ridge;
+              border-color:white;
+              width:500px;
+              }
+
+      td      {
+              background-color: lightblue;
+              padding: 10px;
+              }
+
+      #currentpage
+              {
+              background-color: yellow;
+              }
+
+      .currentpage:after
+              {
+              content: "  <-- You are here"
+              }
+
+      #small-screen-warning
+              {
+              display:none;
+              }
+
+      @media screen and (max-width: 543px)
+              {
+              #small-screen-warning {
+              display:initial;
+              }
+              }
